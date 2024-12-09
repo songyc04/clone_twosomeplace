@@ -29,25 +29,20 @@ const TopBar = () => {
 const TopArea = styled.span`
   height: 100px;
   width: 100%;
-  // background-color: red;
-
   display: flex;
 `;
 
 const TitleArea = styled.span`
   height: 100%;
-  // background-color: blue;
   text-align: center;
   flex: 1;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
-`
+`;
 
 const MenuArea = styled.span`
   height: 100%;
-  // background-color: brown;
   text-align: center;
   top: 50%;
 
@@ -56,13 +51,10 @@ const MenuArea = styled.span`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
-
-`
+`;
 
 const BtnArea = styled.span`
   height: 100%;
-  // background-color: grey;
   text-align: center;
 
   flex: 0.9;
@@ -70,6 +62,6 @@ const BtnArea = styled.span`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-`
+`;
 
 export default TopBar;

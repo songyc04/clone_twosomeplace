@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const TopMenu = ( {content, border} ) => {
   let result;
 
-  if (border == true) {
+  if (border) {
     if (content) {
       result = <MenuButton>{content}</MenuButton>
     } else {
