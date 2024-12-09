@@ -1,10 +1,15 @@
+import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const MainMenu = ( {content} ) => {
   return (
-    <li>{ content }</li>
+    <MenuButton>{ content }</MenuButton>
   );
 }
+
+const MenuButton = styled.button`
+  font-size: 13px;
+`
 
 MainMenu.propTypes = {
   content: PropTypes.string.isRequired,
