@@ -1,14 +1,17 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const TopMenu = ( {content, border} ) => {
+const TopMenu = ( {content, border = false} ) => {
   let result;
 
   if (border) {
     if (content) {
-      result = <MenuButton>{content}</MenuButton>
+      result = <MenuButton iscontent={content}>{content}</MenuButton>
+      console.log(content);
     } else {
-      result = <div>hello</div>
+      result = <MenuButton iscontent={content}>{content}</MenuButton>
+      console.log(content);
+
     }
     
   } else {
@@ -22,7 +25,7 @@ const TopMenu = ( {content, border} ) => {
 const MenuButton = styled.button`
   font-size: 14px;
   color: white;
-  border: 0;
+  border: ${(props) => (props.iscontent ? "0" : "3px solid black")};
   background-color: transparent;
 
   &:hover {
@@ -41,9 +44,9 @@ const MenuLink = styled.a`
 
 
 `
-TopMenu.defaultProps = {
-  border: false, // 기본값 설정
-};
+// TopMenu.defaultProps = {
+//   border: false, // 기본값 설정
+// };
 
 TopMenu.propTypes = {
   content: PropTypes.string,
