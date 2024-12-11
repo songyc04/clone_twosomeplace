@@ -30,6 +30,12 @@ const TopArea = styled.span`
   height: 100px;
   width: 100%;
   display: flex;
+
+  &:hover {
+    background-color: skyblue;
+  }
+
+
 `;
 
 const TitleArea = styled.span`
