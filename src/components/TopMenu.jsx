@@ -23,7 +23,7 @@ const TopMenu = ( {content, border = false} ) => {
 }
 
 const MenuButton = styled.button`
-  font-size: 14px;
+  font-size: 2vh;
   color: white;
   border: ${(props) => (props.iscontent ? "0" : "3px solid black")};
   background-color: transparent;
@@ -34,7 +34,7 @@ const MenuButton = styled.button`
 `;
 
 const MenuLink = styled.a`
-  font-size: 14px;
+  font-size: 2vh;
   font-weight: bold;
   color: white;
   
