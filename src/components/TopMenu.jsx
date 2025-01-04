@@ -13,7 +13,6 @@ const TopMenu = ( {content, border = false} ) => {
       console.log(content);
 
     }
-    
   } else {
     result = <MenuLink>{content}</MenuLink>
   }
