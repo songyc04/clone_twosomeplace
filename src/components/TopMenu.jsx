@@ -6,11 +6,11 @@ const TopMenu = ( {content, border = false} ) => {
 
   if (border) {
     if (content) {
-      result = <MenuButton iscontent={content}>{content}</MenuButton>
-      console.log(content);
+      result = <MenuButton $iscontent={content}>{content}</MenuButton>
+      // console.log(content);
     } else {
-      result = <MenuButton iscontent={content}>{content}</MenuButton>
-      console.log(content);
+      result = <MenuButton $iscontent={content}>{content}</MenuButton>
+      // console.log(content);
 
     }
   } else {
@@ -24,7 +24,7 @@ const TopMenu = ( {content, border = false} ) => {
 const MenuButton = styled.button`
   font-size: 2vh;
   color: white;
-  border: ${(props) => (props.iscontent ? "0" : "3px solid black")};
+  border: ${({$iscontent}) => ($iscontent ? "0" : "3px solid black")};
   background-color: transparent;
 
   &:hover {

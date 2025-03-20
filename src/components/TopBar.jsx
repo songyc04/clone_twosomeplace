@@ -1,11 +1,15 @@
 import styled from "styled-components";
+import { useState } from "react";
 
 import TopMenu from "#components/TopMenu.jsx";
+import HiddenMenu from "#components/HiddenMenu.jsx"
 
 
 const TopBar = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <TopArea>
+    <TopArea onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+      <HiddenMenu isHovered={isHovered}/>
       <TitleArea>
         <TopMenu content="A TWOSOME PLACE"></TopMenu>  
       </TitleArea>
@@ -30,12 +34,6 @@ const TopArea = styled.span`
   height: 100px;
   width: 100%;
   display: flex;
-
-  &:hover {
-    background-color: skyblue;
-  }
-
-
 `;
 
 const TitleArea = styled.span`
@@ -45,6 +43,7 @@ const TitleArea = styled.span`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 1;
 `;
 
 const MenuArea = styled.span`
@@ -57,6 +56,8 @@ const MenuArea = styled.span`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  z-index: 1;
 `;
 
 const BtnArea = styled.span`
@@ -68,6 +69,8 @@ const BtnArea = styled.span`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  z-index: 1;
 `;
 
 export default TopBar;

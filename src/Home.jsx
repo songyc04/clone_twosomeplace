@@ -7,6 +7,7 @@ import BackImage01 from "#resources/Home_BackImage.jpeg";
 
 
 const Home = () => {
+
   return (
     <Main>
       <BackImage>
